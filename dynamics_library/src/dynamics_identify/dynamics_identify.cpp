@@ -131,9 +131,9 @@ void qr_decompose(robot_dyn::RobotModel *robot)
 
 void generate_fourier_trajectory(const VectorXd x, const double t, Fourier *fourier)
 {   
-    /*fourier->q = VectorXd::Zero(fourier->robot.dof);
+    fourier->q = VectorXd::Zero(fourier->robot.dof);
     fourier->qDot = VectorXd::Zero(fourier->robot.dof);
-    fourier->qDDot = VectorXd::Zero(fourier->robot.dof);*/
+    fourier->qDDot = VectorXd::Zero(fourier->robot.dof);
 
     double a;
     double b;
@@ -143,7 +143,7 @@ void generate_fourier_trajectory(const VectorXd x, const double t, Fourier *four
         for (unsigned int j=1; j<= fourier->N; j++)
         {
             a = x(i*(2*fourier->N+1)+j-1);
-            b= x(i*(2*fourier->N+1)+fourier->N+j-1);
+            b = x(i*(2*fourier->N+1)+fourier->N+j-1);
 
             fourier->q(i) = fourier->q(i)+a/(fourier->wf*j)*sin(fourier->wf*j*t)-b/(fourier->wf*j)*cos(fourier->wf*j*t);
             fourier->qDot(i) = fourier->qDot(i)+a*cos(fourier->wf*j*t)+b*sin(fourier->wf*j*t);
@@ -186,7 +186,7 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
             calcu_Ys(&fourier->robot, fourier->q, fourier->qDot, fourier->qDDot);
     }
     
-    int row = (count+1)*fourier->robot.dof;
+    /*int row = (count+1)*fourier->robot.dof;
     double sum1;
     double sum2 = 1;
 
@@ -202,9 +202,23 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
 
             sum2 = sum2*sum1;
         }
-    }  
+    }*/
 
-    return 1/sum2;
+    MatrixXd Wb = MatrixXd::Zero((count+1)*fourier->robot.dof,fourier->robot.Pb_num);
+    int k = -1;
+    for (unsigned int i=0; i< fourier->robot.Ps_num; i++)
+    {
+        if (fourier->robot.Ps_flag(i) == 1)
+        {
+            k++;
+            Wb.col(k) = W.col(i);
+        }
+    }
+
+    double obj = log((Wb.transpose()*Wb).determinant());
+    std::cout << "obj: " << obj << std::endl;
+
+    return obj;
 }
 
 void inequality_constraint(unsigned m, double *result, unsigned n, 

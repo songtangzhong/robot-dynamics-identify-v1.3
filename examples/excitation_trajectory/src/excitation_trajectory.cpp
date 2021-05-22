@@ -89,6 +89,7 @@ int main(int argc, char ** argv)
     else 
     {
         std::cout << "Find minimum resolution successfully." << std::endl;
+        std::cout << "Minimum object function: " << result << std::endl;
     }
 
     nlopt_destroy(opt);
