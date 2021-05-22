@@ -71,7 +71,7 @@ int main(int argc, char ** argv)
     nlopt_set_xtol_rel(opt, 1.0e-4);
 
     VectorXd xx = VectorXd::Ones(x_num);
-    xx = 3*xx;
+    xx = 0.2*xx;
     double x[x_num];
     for (unsigned int i=0; i<x_num; i++)
     {
@@ -89,7 +89,7 @@ int main(int argc, char ** argv)
     else 
     {
         std::cout << "Find minimum resolution successfully." << std::endl;
-        std::cout << "Minimum object function: " << result << std::endl;
+        std::cout << "Minimum object function: " << min_f << std::endl;
     }
 
     nlopt_destroy(opt);
@@ -97,6 +97,7 @@ int main(int argc, char ** argv)
     std::ofstream outfile;
     outfile.open("optimal_x.txt");
     outfile << "number of basic dynamics parameters (Pb_num): " << robot.Pb_num << std::endl;
+    outfile << "initial value of x(i) is: " << xx(0) << std::endl;
     outfile << "optimal value of x is:" << std::endl;
     outfile << "[";
     for (unsigned int i=0; i<x_num; i++)

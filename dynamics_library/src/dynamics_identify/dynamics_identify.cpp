@@ -185,24 +185,6 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
         W.middleRows(i*fourier->robot.dof, fourier->robot.dof) = 
             calcu_Ys(&fourier->robot, fourier->q, fourier->qDot, fourier->qDDot);
     }
-    
-    /*int row = (count+1)*fourier->robot.dof;
-    double sum1;
-    double sum2 = 1;
-
-    for (unsigned int i=0; i< fourier->robot.Ps_num; i++)
-    {
-        if (fourier->robot.Ps_flag(i) == 1)
-        {
-            sum1 = 0;
-            for (unsigned int j=0; j<row; j++)
-            {
-                sum1 = sum1+W(j,i)*W(j,i);
-            }
-
-            sum2 = sum2*sum1;
-        }
-    }*/
 
     MatrixXd Wb = MatrixXd::Zero((count+1)*fourier->robot.dof,fourier->robot.Pb_num);
     int k = -1;
@@ -216,7 +198,6 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
     }
 
     double obj = log((Wb.transpose()*Wb).determinant());
-    std::cout << "obj: " << obj << std::endl;
 
     return obj;
 }
@@ -276,10 +257,6 @@ void inequality_constraint_v1(unsigned m, double *result, unsigned n,
 
     Fourier *fourier = (Fourier *)f_data;
 
-    VectorXd q = VectorXd::Zero(fourier->robot.dof);
-    VectorXd qDot = VectorXd::Zero(fourier->robot.dof);
-    VectorXd qDDot = VectorXd::Zero(fourier->robot.dof);
-
     int count = (int)(fourier->Tf/fourier->h);
     double t = -fourier->h;
     unsigned int num = fourier->robot.dof*3*2;
@@ -289,6 +266,10 @@ void inequality_constraint_v1(unsigned m, double *result, unsigned n,
     for (unsigned int k=0; k<=count; k++)
     {
         t += fourier->h;
+
+        VectorXd q = VectorXd::Zero(fourier->robot.dof);
+        VectorXd qDot = VectorXd::Zero(fourier->robot.dof);
+        VectorXd qDDot = VectorXd::Zero(fourier->robot.dof);
 
         for (unsigned int i=0; i< fourier->robot.dof; i++)
         {
