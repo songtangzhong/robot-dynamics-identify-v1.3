@@ -30,7 +30,7 @@ int main(int argc, char ** argv)
     robot_iden::qr_decompose(&robot);
 
     robot_iden::Fourier fourier(robot);
-    fourier.wf = 0.02*2*M_PI; 
+    fourier.wf = 0.05*2*M_PI; 
     fourier.Tf = 20;
     fourier.h = 0.1;
 

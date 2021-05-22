@@ -131,6 +131,10 @@ void qr_decompose(robot_dyn::RobotModel *robot)
 
 void generate_fourier_trajectory(const VectorXd x, const double t, Fourier *fourier)
 {   
+    /*fourier->q = VectorXd::Zero(fourier->robot.dof);
+    fourier->qDot = VectorXd::Zero(fourier->robot.dof);
+    fourier->qDDot = VectorXd::Zero(fourier->robot.dof);*/
+
     double a;
     double b;
 
