@@ -71,7 +71,7 @@ int main(int argc, char ** argv)
     nlopt_set_xtol_rel(opt, 1.0e-4);
 
     VectorXd xx = VectorXd::Ones(x_num);
-    xx = 0.2*xx;
+    xx = 4*xx;
     double x[x_num];
     for (unsigned int i=0; i<x_num; i++)
     {
