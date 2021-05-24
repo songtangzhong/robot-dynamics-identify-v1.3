@@ -1,4 +1,4 @@
-# robot-dynamics-identify-v1.2
+# robot-dynamics-identify-v1.3
 
 ## Description:
 This is a common robot dynamics parameters identification library, which can be used on all robots with revelote joint. The identification method is based on the least square method. Some examples are in package "examples".
