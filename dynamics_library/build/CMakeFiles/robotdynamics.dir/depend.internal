@@ -5,11 +5,11 @@ CMakeFiles/robotdynamics.dir/src/dynamics_identify/dynamics_identify.cpp.o
  ../include/dynamics_identify/dynamics_identify.h
  ../include/robot_model/robot_math.h
  ../include/robot_model/robot_model.h
- /home/stz/robot-dynamics-identify/dynamics_library/src/dynamics_identify/dynamics_identify.cpp
+ /home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/dynamics_identify/dynamics_identify.cpp
 CMakeFiles/robotdynamics.dir/src/robot_dynamics/robot_dynamics.cpp.o
  ../include/robot_dynamics/robot_dynamics.h
  ../include/robot_model/robot_model.h
- /home/stz/robot-dynamics-identify/dynamics_library/src/robot_dynamics/robot_dynamics.cpp
+ /home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/robot_dynamics/robot_dynamics.cpp
 CMakeFiles/robotdynamics.dir/src/robot_model/robot_model.cpp.o
  ../include/robot_model/robot_model.h
- /home/stz/robot-dynamics-identify/dynamics_library/src/robot_model/robot_model.cpp
+ /home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/robot_model/robot_model.cpp

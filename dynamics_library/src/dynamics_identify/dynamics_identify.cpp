@@ -57,7 +57,7 @@ MatrixXd calcu_Ys(robot_dyn::RobotModel *robot,
 
 void qr_decompose(robot_dyn::RobotModel *robot)
 {
-    unsigned int count = 100;
+    unsigned int count = 1000;
 
     MatrixXd Ys = MatrixXd::Zero(robot->dof,robot->Ps_num);
     MatrixXd W = MatrixXd::Zero(count*robot->dof,robot->Ps_num);
@@ -186,7 +186,7 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
             calcu_Ys(&fourier->robot, fourier->q, fourier->qDot, fourier->qDDot);
     }
 
-    MatrixXd Wb = MatrixXd::Zero((count+1)*fourier->robot.dof,fourier->robot.Pb_num);
+    /*MatrixXd Wb = MatrixXd::Zero((count+1)*fourier->robot.dof,fourier->robot.Pb_num);
     int k = -1;
     for (unsigned int i=0; i< fourier->robot.Ps_num; i++)
     {
@@ -199,9 +199,9 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
 
     double obj = log((Wb.transpose()*Wb).determinant());
 
-    return obj;
+    return obj;*/
 
-    /*unsigned int row = (count+1)*fourier->robot.dof;
+    unsigned int row = (count+1)*fourier->robot.dof;
     double sum1;
     double sum2 = 1;
 
@@ -219,7 +219,7 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
         }
     }  
 
-    return 1/sum2;*/
+    return 1/sum2;
 }
 
 void inequality_constraint(unsigned m, double *result, unsigned n, 

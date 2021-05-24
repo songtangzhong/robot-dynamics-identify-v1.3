@@ -49,10 +49,10 @@ public:
 
 private:
     // Standard D-H parameters
-    VectorXd alpha;    // x rotation
-    VectorXd a;        // x translation
     VectorXd theta;    // z rotation
     VectorXd d;        // z translation
+    VectorXd alpha;    // x rotation
+    VectorXd a;        // x translation
     VectorXd offset;
 
     Matrix3d I33 = Matrix3d::Identity();

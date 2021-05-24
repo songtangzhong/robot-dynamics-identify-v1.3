@@ -30,7 +30,7 @@ Eigen/Dense
 Eigen/Dense
 -
 
-/home/stz/robot-dynamics-identify/dynamics_library/src/dynamics_identify/dynamics_identify.cpp
+/home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/dynamics_identify/dynamics_identify.cpp
 dynamics_identify/dynamics_identify.h
 -
 robot_model/robot_model.h
@@ -44,11 +44,11 @@ iostream
 Eigen/Dense
 -
 
-/home/stz/robot-dynamics-identify/dynamics_library/src/robot_dynamics/robot_dynamics.cpp
+/home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/robot_dynamics/robot_dynamics.cpp
 robot_dynamics/robot_dynamics.h
 -
 
-/home/stz/robot-dynamics-identify/dynamics_library/src/robot_model/robot_model.cpp
+/home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/robot_model/robot_model.cpp
 robot_model/robot_model.h
 -
 math.h

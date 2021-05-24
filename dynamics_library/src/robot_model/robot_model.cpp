@@ -44,10 +44,10 @@ void RobotModel::InitModel(const unsigned int DOF)
 
     qr_threshold = 1e-10;
 
-    alpha.resize(dof);
-    a.resize(dof);
     theta.resize(dof);
     d.resize(dof);
+    alpha.resize(dof);
+    a.resize(dof);
     offset.resize(dof);
 
     Z << 0, 0, 1;
@@ -100,9 +100,9 @@ void RobotModel::SetDynamicsParameters(const VectorXd param)
 
         Pc(i) << param(i*Psi_num+1), param(i*Psi_num+2), param(i*Psi_num+3);
     
-        I(i) << param(i*Psi_num+4), param(i*Psi_num+5), param(i*Psi_num+6),
-                param(i*Psi_num+5), param(i*Psi_num+7), param(i*Psi_num+8),
-                param(i*Psi_num+6), param(i*Psi_num+8), param(i*Psi_num+9);
+        I(i) <<  param(i*Psi_num+4), -param(i*Psi_num+5), -param(i*Psi_num+6),
+                -param(i*Psi_num+5),  param(i*Psi_num+7), -param(i*Psi_num+8),
+                -param(i*Psi_num+6), -param(i*Psi_num+8),  param(i*Psi_num+9);
 
         Ic(i) = I(i)-m(i)*(Pc(i).transpose()*Pc(i)*I33-Pc(i)*Pc(i).transpose());
     }
@@ -114,7 +114,7 @@ VectorXd RobotModel::calcu_inv_dyn(const VectorXd q, const VectorXd qDot, const 
 
     for (unsigned int i=0; i<dof; i++)
     {
-        R(i) = Rot(alpha(i), theta(i));
+        R(i) = Rot(theta(i), alpha(i));
         R_T(i) = R(i).transpose();
     }
 
