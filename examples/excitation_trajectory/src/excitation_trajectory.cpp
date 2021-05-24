@@ -15,7 +15,7 @@ int main(int argc, char ** argv)
     // standard DH parameters
     MatrixXd DH = MatrixXd::Zero(4,dof);
     DH << 0.317, 0.1925, 0.4, -0.1685, 0.4, 0.1363, 0.13375,            // d
-          M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2,       // alpha
+          M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, 0,            // alpha
           -0.081, 0, 0, 0, 0, 0, 0,                                     // a
           M_PI, -M_PI/2, M_PI, M_PI, M_PI, M_PI, -M_PI/2;               // offset
     robot.SetKinematicsParameters(DH);
@@ -50,7 +50,7 @@ int main(int argc, char ** argv)
         robot_iden::inequality_constraint, &fourier, tol_ineq);
 
     // Another version of inequality constraint
-    /*int count = (int)(fourier.Tf/fourier.h);
+    /*unsigned int count = (int)(fourier.Tf/fourier.h);
     unsigned m_ineq = robot.dof*3*2*(count+1);
     double tol_ineq[m_ineq];
     for (unsigned int i=0; i<m_ineq; i++)
@@ -71,7 +71,7 @@ int main(int argc, char ** argv)
     nlopt_set_xtol_rel(opt, 1.0e-4);
 
     VectorXd xx = VectorXd::Ones(x_num);
-    xx = 4*xx;
+    xx = 0.3*xx;
     double x[x_num];
     for (unsigned int i=0; i<x_num; i++)
     {

@@ -17,7 +17,7 @@ int main(int argc, char ** argv)
     // standard DH parameters
     MatrixXd DH = MatrixXd::Zero(4,dof);
     DH << 0.317, 0.1925, 0.4, -0.1685, 0.4, 0.1363, 0.13375,            // d
-          M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2,       // alpha
+          M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, 0,            // alpha
           -0.081, 0, 0, 0, 0, 0, 0,                                     // a
           M_PI, -M_PI/2, M_PI, M_PI, M_PI, M_PI, -M_PI/2;               // offset
     robot.SetKinematicsParameters(DH);

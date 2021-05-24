@@ -200,6 +200,26 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
     double obj = log((Wb.transpose()*Wb).determinant());
 
     return obj;
+
+    /*unsigned int row = (count+1)*fourier->robot.dof;
+    double sum1;
+    double sum2 = 1;
+
+    for (unsigned int i=0; i< fourier->robot.Ps_num; i++)
+    {
+        if (fourier->robot.Ps_flag(i) == 1)
+        {
+            sum1 = 0;
+            for (unsigned int j=0; j<row; j++)
+            {
+                sum1 = sum1+W(j,i)*W(j,i);
+            }
+
+            sum2 = sum2*sum1;
+        }
+    }  
+
+    return 1/sum2;*/
 }
 
 void inequality_constraint(unsigned m, double *result, unsigned n, 

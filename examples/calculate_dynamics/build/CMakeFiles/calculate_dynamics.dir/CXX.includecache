@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/stz/robot-dynamics-identify-v1.1/examples/calculate_dynamics/src/calculate_dynamics.cpp
+/home/stz/robot-dynamics-identify/examples/calculate_dynamics/src/calculate_dynamics.cpp
 robot_model/robot_model.h
 -
 robot_dynamics/robot_dynamics.h
