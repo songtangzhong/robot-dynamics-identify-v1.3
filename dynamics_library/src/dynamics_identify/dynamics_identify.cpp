@@ -36,17 +36,16 @@ MatrixXd calcu_Ys(robot_dyn::RobotModel *robot,
     for (unsigned int i=0; i< robot->Ps_num; i++)
     {
         VectorXd Ps = VectorXd::Zero(robot->Ps_num);
+        Ps(i) = 1;
 
         if ((i%robot->Psi_num)==1 || (i%robot->Psi_num)==2 || (i%robot->Psi_num)==3)
         {
             Ps(0) = 1;
-            Ps(i) = 1;
             robot->SetDynamicsParameters(Ps);
             Ys.col(i) = robot->calcu_inv_dyn(q, qDot, qDDot)-Ys.col(0);
         }
         else
         {
-            Ps(i) = 1;
             robot->SetDynamicsParameters(Ps);
             Ys.col(i) = robot->calcu_inv_dyn(q, qDot, qDDot);
         }
@@ -147,7 +146,7 @@ void generate_fourier_trajectory(const VectorXd x, const double t, Fourier *four
 
             fourier->q(i) = fourier->q(i)+a/(fourier->wf*j)*sin(fourier->wf*j*t)-b/(fourier->wf*j)*cos(fourier->wf*j*t);
             fourier->qDot(i) = fourier->qDot(i)+a*cos(fourier->wf*j*t)+b*sin(fourier->wf*j*t);
-            fourier->qDDot(i) = fourier->qDDot(i)-fourier->wf*a*j*sin(fourier->wf*j*t)+fourier->wf*b*j*cos(fourier->wf*j*t);
+            fourier->qDDot(i) = fourier->qDDot(i)+fourier->wf*b*j*cos(fourier->wf*j*t)-fourier->wf*a*j*sin(fourier->wf*j*t);
         }
 
         fourier->q(i) = fourier->q(i)+x(i*(2*fourier->N+1)+2*fourier->N);
@@ -164,7 +163,7 @@ double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_dat
 
     Fourier *fourier = (Fourier *)f_data;
 
-    int count = (int)(fourier->Tf/fourier->h);
+    unsigned int count = (unsigned int)(fourier->Tf/fourier->h);
     double t = -fourier->h;
 
     MatrixXd W = MatrixXd::Zero((count+1)*fourier->robot.dof,fourier->robot.Ps_num);
@@ -277,7 +276,7 @@ void inequality_constraint_v1(unsigned m, double *result, unsigned n,
 
     Fourier *fourier = (Fourier *)f_data;
 
-    int count = (int)(fourier->Tf/fourier->h);
+    unsigned int count = (unsigned int)(fourier->Tf/fourier->h);
     double t = -fourier->h;
     unsigned int num = fourier->robot.dof*3*2;
     double a;
@@ -300,7 +299,7 @@ void inequality_constraint_v1(unsigned m, double *result, unsigned n,
 
                 q(i) = q(i)+a/(fourier->wf*j)*sin(fourier->wf*j*t)-b/(fourier->wf*j)*cos(fourier->wf*j*t);
                 qDot(i) = qDot(i)+a*cos(fourier->wf*j*t)+b*sin(fourier->wf*j*t);
-                qDDot(i) = qDDot(i)-fourier->wf*a*j*sin(fourier->wf*j*t)+fourier->wf*b*j*cos(fourier->wf*j*t);
+                qDDot(i) = qDDot(i)+fourier->wf*b*j*cos(fourier->wf*j*t)-fourier->wf*a*j*sin(fourier->wf*j*t);
             }
 
             q(i) = q(i)+x[i*(2*fourier->N+1)+2*fourier->N];
@@ -311,9 +310,9 @@ void inequality_constraint_v1(unsigned m, double *result, unsigned n,
             result[k*num+i] = q(i)-fourier->robot.qMax(i);
             result[k*num+fourier->robot.dof+i] = qDot(i)-fourier->robot.qDotMax(i);
             result[k*num+2*fourier->robot.dof+i] = qDDot(i)-fourier->robot.qDDotMax(i);
-            result[k*num+3*fourier->robot.dof+i] = -q(i)+fourier->robot.qMin(i);
-            result[k*num+4*fourier->robot.dof+i] = -qDot(i)+fourier->robot.qDotMin(i);
-            result[k*num+5*fourier->robot.dof+i] = -qDDot(i)+fourier->robot.qDDotMin(i);
+            result[k*num+3*fourier->robot.dof+i] = fourier->robot.qMin(i)-q(i);
+            result[k*num+4*fourier->robot.dof+i] = fourier->robot.qDotMin(i)-qDot(i);
+            result[k*num+5*fourier->robot.dof+i] = fourier->robot.qDDotMin(i)-qDDot(i);
         }
     }
 }
@@ -348,7 +347,7 @@ void equality_constraint(unsigned m, double *result, unsigned n,
 
             q_Tf(i) = q_Tf(i)+a/(fourier->wf*j)*sin(fourier->wf*j*fourier->Tf)-b/(fourier->wf*j)*cos(fourier->wf*j*fourier->Tf);
             qDot_Tf(i) = qDot_Tf(i)+a*cos(fourier->wf*j*fourier->Tf)+b*sin(fourier->wf*j*fourier->Tf);
-            qDDot_Tf(i) = qDDot_Tf(i)-fourier->wf*a*j*sin(fourier->wf*j*fourier->Tf)+fourier->wf*b*j*cos(fourier->wf*j*fourier->Tf);
+            qDDot_Tf(i) = qDDot_Tf(i)+fourier->wf*b*j*cos(fourier->wf*j*fourier->Tf)-fourier->wf*a*j*sin(fourier->wf*j*fourier->Tf);
         }
 
         q_T0(i) = q_T0(i)+x[i*(2*fourier->N+1)+2*fourier->N];

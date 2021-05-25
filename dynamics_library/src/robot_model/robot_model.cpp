@@ -14,15 +14,6 @@ Matrix3d Rot(const double theta, const double alpha)
     return R;
 }
 
-Vector3d Trans(const double theta, const double d, const double a)
-{
-    Vector3d T;
-
-    T << a*cos(theta), a*sin(theta), d;
-
-    return T;
-}
-
 void RobotModel::InitModel(const unsigned int DOF)
 {
     dof = DOF;
@@ -74,21 +65,21 @@ void RobotModel::InitModel(const unsigned int DOF)
     n.resize(dof+1);
 
     tau.resize(dof);
-
-    w(0) << 0, 0, 0;
-    wDot(0) << 0, 0, 0;
-    vDot(0) << 0, 0, g;
-    
-    f(dof) << 0, 0, 0;
-    n(dof) << 0, 0, 0;
 }
 
-void RobotModel::SetKinematicsParameters(const MatrixXd param)
+void RobotModel::SetKinematicsParameters(const MatrixXd param, const Matrix<Vector3d,1,Dynamic> P_)
 {
     d = param.row(0).transpose();
     alpha = param.row(1).transpose();
     a = param.row(2).transpose();
     offset = param.row(3).transpose();
+
+    for (unsigned int j=0; j<dof; j++)
+    {
+        P(j) = P_(j);
+    }
+
+    P(dof) << 0, 0, 0;
 }
 
 // [mi rcxi rcyi rczi Ixxi Ixyi Ixzi Iyyi Iyzi Izzi]'
@@ -121,14 +112,12 @@ VectorXd RobotModel::calcu_inv_dyn(const VectorXd q, const VectorXd qDot, const 
     R(dof) = Rot(0.0, 0.0);
     R_T(dof) = R(dof).transpose();
 
-    for (unsigned int i=0; i<dof; i++)
-    {
-        P(i) = Trans(theta(i), d(i), a(i));
-    }
-
-    P(dof) = Trans(0.0, 0.0, 0.0);
-
+    w(0) << 0, 0, 0;
+    wDot(0) << 0, 0, 0;
     vDot(0) << 0, 0, g;
+    
+    f(dof) << 0, 0, 0;
+    n(dof) << 0, 0, 0;
 
     for (unsigned int i=1; i<=dof; i++)
     {
@@ -140,11 +129,11 @@ VectorXd RobotModel::calcu_inv_dyn(const VectorXd q, const VectorXd qDot, const 
         N(i-1) = Ic(i-1)*wDot(i)+w(i).cross(Ic(i-1)*w(i));
     }
     
-    for (unsigned int i=dof; i>0; i--)
+    for (int i=dof-1; i>=0; i--)
     {
-        f(i-1) = R_T(i)*f(i)+F(i-1);
-        n(i-1) = N(i-1)+R_T(i)*n(i)+Pc(i-1).cross(F(i-1))+P(i).cross(R_T(i)*f(i));
-        tau(i-1) = n(i-1).transpose()*Z;
+        f(i) = R_T(i+1)*f(i+1)+F(i);
+        n(i) = N(i)+R_T(i+1)*n(i+1)+Pc(i).cross(F(i))+P(i+1).cross(R_T(i+1)*f(i+1));
+        tau(i) = n(i).transpose()*Z;
     }
 
     return tau;

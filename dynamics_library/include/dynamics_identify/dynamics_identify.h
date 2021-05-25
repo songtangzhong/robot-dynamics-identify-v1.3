@@ -38,7 +38,7 @@ MatrixXd calcu_Ys(robot_dyn::RobotModel *robot,
 
 void qr_decompose(robot_dyn::RobotModel *robot);
 
-// a1 ... a5, b1 ... b5, q0
+// ai_1 ... ai_5, bi_1 ... bi_5, qi_0
 void generate_fourier_trajectory(const VectorXd x, const double t, Fourier *fourier);
 
 double optimal_object_fun(unsigned n, const double *x, double *grad, void *f_data);

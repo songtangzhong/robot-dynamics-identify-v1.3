@@ -9,8 +9,6 @@ namespace robot_dyn
 {
 Matrix3d Rot(const double theta, const double alpha);
 
-Vector3d Trans(const double theta, const double d, const double a);
-
 class RobotModel
 {
 public:
@@ -19,9 +17,9 @@ public:
 
     void InitModel(const unsigned int DOF);
 
-    void SetKinematicsParameters(const MatrixXd param);
+    void SetKinematicsParameters(const MatrixXd param, const Matrix<Vector3d,1,Dynamic> P_);
 
-    // [mi rcxi rcyi rczi Ixxi Ixyi Ixzi Iyyi Iyzi Izzi]'
+    // mi rcxi rcyi rczi Ixxi Ixyi Ixzi Iyyi Iyzi Izzi
     void SetDynamicsParameters(const VectorXd param);
 
     VectorXd calcu_inv_dyn(const VectorXd q, const VectorXd qDot, const VectorXd qDDot);

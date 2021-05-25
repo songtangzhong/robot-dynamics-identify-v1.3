@@ -15,10 +15,19 @@ int main(int argc, char ** argv)
     // standard DH parameters
     MatrixXd DH = MatrixXd::Zero(4,dof);
     DH << 0.317, 0.1925, 0.4, -0.1685, 0.4, 0.1363, 0.13375,            // d
-          M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, 0,            // alpha
+          M_PI_2, M_PI_2, M_PI_2, M_PI_2, M_PI_2, M_PI_2, 0,            // alpha
           -0.081, 0, 0, 0, 0, 0, 0,                                     // a
-          M_PI, -M_PI/2, M_PI, M_PI, M_PI, M_PI, -M_PI/2;               // offset
-    robot.SetKinematicsParameters(DH);
+          M_PI, -M_PI_2, M_PI, M_PI, M_PI, M_PI, -M_PI_2;               // offset
+    Matrix<Vector3d,1,Dynamic> P;
+    P.resize(dof);
+    P(0) << 0.081, 0, 0.317;
+    P(1) << 0, 0, 0.1925;
+    P(2) << 0, 0, 0.4;
+    P(3) << 0, 0, -0.1685;
+    P(4) << 0, 0, 0.4;
+    P(5) << 0, 0, 0.1363;
+    P(6) << 0, 0, 0.13375;
+    robot.SetKinematicsParameters(DH, P);
 
     robot.qMin << -3.0503, -2.2736, -3.0426, -3.0439, -2.9761, -2.9761, -3.14;
     robot.qMax << 3.0503, 2.2736, 3.0426, 3.0439, 2.9761, 2.9761, 3.14;
@@ -71,7 +80,7 @@ int main(int argc, char ** argv)
     nlopt_set_xtol_rel(opt, 1.0e-4);
 
     VectorXd xx = VectorXd::Ones(x_num);
-    xx = 6*xx;
+    xx = 3*xx;
     double x[x_num];
     for (unsigned int i=0; i<x_num; i++)
     {

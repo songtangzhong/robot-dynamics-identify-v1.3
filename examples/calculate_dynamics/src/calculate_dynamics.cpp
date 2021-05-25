@@ -17,13 +17,22 @@ int main(int argc, char ** argv)
     // standard DH parameters
     MatrixXd DH = MatrixXd::Zero(4,dof);
     DH << 0.317, 0.1925, 0.4, -0.1685, 0.4, 0.1363, 0.13375,            // d
-          M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, M_PI/2, 0,            // alpha
+          M_PI_2, M_PI_2, M_PI_2, M_PI_2, M_PI_2, M_PI_2, 0,            // alpha
           -0.081, 0, 0, 0, 0, 0, 0,                                     // a
-          M_PI, -M_PI/2, M_PI, M_PI, M_PI, M_PI, -M_PI/2;               // offset
-    robot.SetKinematicsParameters(DH);
+          M_PI, -M_PI_2, M_PI, M_PI, M_PI, M_PI, -M_PI_2;               // offset
+    Matrix<Vector3d,1,Dynamic> P;
+    P.resize(dof);
+    P(0) << 0.081, 0, 0.317;
+    P(1) << 0, 0, 0.1925;
+    P(2) << 0, 0, 0.4;
+    P(3) << 0, 0, -0.1685;
+    P(4) << 0, 0, 0.4;
+    P(5) << 0, 0, 0.1363;
+    P(6) << 0, 0, 0.13375;
+    robot.SetKinematicsParameters(DH, P);
 
     VectorXd param = VectorXd::Zero(robot.Psi_num*dof);
-    param << 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0.483224, 
+    param << 0.1, 0.111, 0.243, 0.876, 0.343, 0124, 0.365, 0123, 053, 0.483224, 
              0, 5.83642, 0.690557, 0.1, 3.01686, 16.5103, 1.00592, 0, -0.503815, 2.8116, 
              0, -7.00666, -22.4839, 0, 6.53773, 5.28274, 0.1, -1.3729, -0.538932, -0.397061, 
              -9.09525, 6.03299, -0.318568, -18.3559, -2.18405, -8.17642, -5.54922, -0.341478, 0.886727, 0.1, 
