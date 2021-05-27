@@ -7,7 +7,7 @@ using namespace Eigen;
 
 namespace robot_dyn
 {
-Matrix3d Rot(const double theta, const double alpha);
+Matrix3d Rot(const double alpha, const double theta);
 
 class RobotModel
 {
@@ -46,11 +46,11 @@ public:
     double qr_threshold;
 
 private:
-    // Standard D-H parameters
-    VectorXd theta;    // z rotation
-    VectorXd d;        // z translation
+    // Modified DH parameters
     VectorXd alpha;    // x rotation
     VectorXd a;        // x translation
+    VectorXd theta;    // z rotation
+    VectorXd d;        // z translation
     VectorXd offset;
 
     Matrix3d I33 = Matrix3d::Identity();

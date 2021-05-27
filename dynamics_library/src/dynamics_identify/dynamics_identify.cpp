@@ -56,7 +56,7 @@ MatrixXd calcu_Ys(robot_dyn::RobotModel *robot,
 
 void qr_decompose(robot_dyn::RobotModel *robot)
 {
-    unsigned int count = 1000;
+    unsigned int count = 100;
 
     MatrixXd Ys = MatrixXd::Zero(robot->dof,robot->Ps_num);
     MatrixXd W = MatrixXd::Zero(count*robot->dof,robot->Ps_num);

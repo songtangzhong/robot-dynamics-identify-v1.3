@@ -3,13 +3,13 @@
 
 namespace robot_dyn
 {
-Matrix3d Rot(const double theta, const double alpha)
+Matrix3d Rot(const double alpha, const double theta)
 {
     Matrix3d R;
 
-    R << cos(theta),   -sin(theta)*cos(alpha),    sin(theta)*sin(alpha),             
-         sin(theta),    cos(theta)*cos(alpha),   -cos(theta)*sin(alpha),
-         0,             sin(alpha),               cos(alpha);
+    R << cos(theta),              -sin(theta),                0,
+         cos(alpha)*sin(theta),    cos(alpha)*cos(theta),    -sin(alpha),
+         sin(alpha)*sin(theta),    sin(alpha)*cos(theta),     cos(alpha);
 
     return R;
 }
@@ -35,10 +35,10 @@ void RobotModel::InitModel(const unsigned int DOF)
 
     qr_threshold = 1e-10;
 
-    theta.resize(dof);
-    d.resize(dof);
     alpha.resize(dof);
     a.resize(dof);
+    theta.resize(dof);
+    d.resize(dof);
     offset.resize(dof);
 
     Z << 0, 0, 1;
@@ -69,9 +69,9 @@ void RobotModel::InitModel(const unsigned int DOF)
 
 void RobotModel::SetKinematicsParameters(const MatrixXd param, const Matrix<Vector3d,1,Dynamic> P_)
 {
-    d = param.row(0).transpose();
-    alpha = param.row(1).transpose();
-    a = param.row(2).transpose();
+    alpha = param.row(0).transpose();
+    a = param.row(1).transpose();
+    d = param.row(2).transpose();
     offset = param.row(3).transpose();
 
     for (unsigned int j=0; j<dof; j++)
@@ -91,9 +91,9 @@ void RobotModel::SetDynamicsParameters(const VectorXd param)
 
         Pc(i) << param(i*Psi_num+1), param(i*Psi_num+2), param(i*Psi_num+3);
     
-        I(i) <<  param(i*Psi_num+4), -param(i*Psi_num+5), -param(i*Psi_num+6),
-                -param(i*Psi_num+5),  param(i*Psi_num+7), -param(i*Psi_num+8),
-                -param(i*Psi_num+6), -param(i*Psi_num+8),  param(i*Psi_num+9);
+        I(i) << param(i*Psi_num+4), param(i*Psi_num+5), param(i*Psi_num+6),
+                param(i*Psi_num+5),  param(i*Psi_num+7), param(i*Psi_num+8),
+                param(i*Psi_num+6), param(i*Psi_num+8),  param(i*Psi_num+9);
 
         Ic(i) = I(i)-m(i)*(Pc(i).transpose()*Pc(i)*I33-Pc(i)*Pc(i).transpose());
     }
@@ -105,7 +105,7 @@ VectorXd RobotModel::calcu_inv_dyn(const VectorXd q, const VectorXd qDot, const 
 
     for (unsigned int i=0; i<dof; i++)
     {
-        R(i) = Rot(theta(i), alpha(i));
+        R(i) = Rot(alpha(i), theta(i));
         R_T(i) = R(i).transpose();
     }
 

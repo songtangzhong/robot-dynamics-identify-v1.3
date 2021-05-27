@@ -40,4 +40,5 @@ make
 A file called "optimal_x.txt" will be generate in this "build" folder, which contains optimal parameters of fourier trajectory.
 
 (3) Plot the generated excitation trajectory.
-In matlab environment, run "plot_excitation_trajectory.m".
+
+    In matlab environment, run "plot_excitation_trajectory.m".

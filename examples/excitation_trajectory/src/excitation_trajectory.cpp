@@ -12,24 +12,24 @@ int main(int argc, char ** argv)
 
     robot.InitModel(dof);
 
-    // standard DH parameters
-    MatrixXd DH = MatrixXd::Zero(4,dof);
-    DH << 0.317, 0.1925, 0.4, -0.1685, 0.4, 0.1363, 0.13375,            // d
-          M_PI_2, M_PI_2, M_PI_2, M_PI_2, M_PI_2, M_PI_2, 0,            // alpha
-          -0.081, 0, 0, 0, 0, 0, 0,                                     // a
-          M_PI, -M_PI_2, M_PI, M_PI, M_PI, M_PI, -M_PI_2;               // offset
+    // Modified MDH parameters
+    MatrixXd MDH = MatrixXd::Zero(4,dof);
+    MDH << 0, -M_PI_2, -M_PI_2, M_PI_2, -M_PI_2, M_PI_2, -M_PI_2,            // alpha
+           0, 0.081, 0, 0, 0, 0, 0,                                          // a
+           0, 0.1925, 0.4, -0.1685, 0.4, 0.1363, 0,                          // d
+           0, -M_PI_2, 0, 0, 0, 0, 0;                                        // offset
     Matrix<Vector3d,1,Dynamic> P;
     P.resize(dof);
-    P(0) << 0.081, 0, 0.317;
-    P(1) << 0, 0, 0.1925;
-    P(2) << 0, 0, 0.4;
-    P(3) << 0, 0, -0.1685;
-    P(4) << 0, 0, 0.4;
-    P(5) << 0, 0, 0.1363;
-    P(6) << 0, 0, 0.13375;
-    robot.SetKinematicsParameters(DH, P);
+    P(0) << 0, 0, 0;
+    P(1) << 0.081, 0.1925, 0;
+    P(2) << 0, 0.4, 0;
+    P(3) << 0, 0.1685, 0;
+    P(4) << 0, 0.4, 0;
+    P(5) << 0, -0.1363, 0;
+    P(6) << 0, 0, 0;
+    robot.SetKinematicsParameters(MDH, P);
 
-    robot.qMin << -3.0503, -2.2736, -3.0426, -3.0439, -2.9761, -2.9761, -3.14;
+    robot.qMin << -3.0503, -3.8095, -3.0426, -3.0439, -2.9761, -2.9761, -3.14;
     robot.qMax << 3.0503, 2.2736, 3.0426, 3.0439, 2.9761, 2.9761, 3.14;
     robot.qDotMin << -1.74, -1.328, -1.957, -1.957, -3.485, -3.485, -4.545;
     robot.qDotMax << 1.74, 1.328, 1.957, 1.957, 3.485, 3.485, 4.545;
@@ -39,7 +39,7 @@ int main(int argc, char ** argv)
     robot_iden::qr_decompose(&robot);
 
     robot_iden::Fourier fourier(robot);
-    fourier.wf = 0.05*2*M_PI; 
+    fourier.wf = 0.1*M_PI; 
     fourier.Tf = 20;
     fourier.h = 0.1;
 
@@ -80,7 +80,7 @@ int main(int argc, char ** argv)
     nlopt_set_xtol_rel(opt, 1.0e-4);
 
     VectorXd xx = VectorXd::Ones(x_num);
-    xx = 3*xx;
+    xx = 1*xx;
     double x[x_num];
     for (unsigned int i=0; i<x_num; i++)
     {
