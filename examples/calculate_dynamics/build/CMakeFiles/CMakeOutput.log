@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/stz/robot-dynamics-ident
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2e92f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2e92f.dir/build.make CMakeFiles/cmTC_2e92f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_76770/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76770.dir/build.make CMakeFiles/cmTC_76770.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2e92f.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_2e92f.dir/testCCompiler.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_2e92f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e92f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_2e92f.dir/testCCompiler.c.o  -o cmTC_2e92f -rdynamic 
+Building C object CMakeFiles/cmTC_76770.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_76770.dir/testCCompiler.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_76770
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76770.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_76770.dir/testCCompiler.c.o  -o cmTC_76770 -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_576cb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_576cb.dir/build.make CMakeFiles/cmTC_576cb.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9fd8f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9fd8f.dir/build.make CMakeFiles/cmTC_9fd8f.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_576cb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_576cb.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o  -o cmTC_576cb -rdynamic  
+Building C object CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_9fd8f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fd8f.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o  -o cmTC_9fd8f -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,8 +59,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_576cb' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCXGPlY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_576cb /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9fd8f' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyfnyqG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9fd8f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_576cb/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_576cb.dir/build.make CMakeFiles/cmTC_576cb.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_9fd8f/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_9fd8f.dir/build.make CMakeFiles/cmTC_9fd8f.dir/build]
   ignore line: [make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_576cb]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_576cb.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o  -o cmTC_576cb -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_9fd8f]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fd8f.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o  -o cmTC_9fd8f -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_576cb' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCXGPlY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_576cb /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9fd8f' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyfnyqG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9fd8f /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccCXGPlY.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccyfnyqG.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_576cb] ==> ignore
+    arg [cmTC_9fd8f] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_576cb.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_9fd8f.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -155,14 +155,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cae4a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cae4a.dir/build.make CMakeFiles/cmTC_cae4a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_44fbb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44fbb.dir/build.make CMakeFiles/cmTC_44fbb.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cae4a.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_cae4a.dir/feature_tests.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_cae4a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cae4a.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_cae4a.dir/feature_tests.c.o  -o cmTC_cae4a -rdynamic 
+Building C object CMakeFiles/cmTC_44fbb.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_44fbb.dir/feature_tests.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_44fbb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44fbb.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_44fbb.dir/feature_tests.c.o  -o cmTC_44fbb -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -175,14 +175,14 @@ make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calc
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_79888/fast"
-/usr/bin/make -f CMakeFiles/cmTC_79888.dir/build.make CMakeFiles/cmTC_79888.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1c738/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1c738.dir/build.make CMakeFiles/cmTC_1c738.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_79888.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_79888.dir/feature_tests.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_79888
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79888.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_79888.dir/feature_tests.c.o  -o cmTC_79888 -rdynamic 
+Building C object CMakeFiles/cmTC_1c738.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_1c738.dir/feature_tests.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1c738
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c738.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1c738.dir/feature_tests.c.o  -o cmTC_1c738 -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -195,14 +195,14 @@ make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calc
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2a532/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2a532.dir/build.make CMakeFiles/cmTC_2a532.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1f61a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1f61a.dir/build.make CMakeFiles/cmTC_1f61a.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2a532.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_2a532.dir/feature_tests.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_2a532
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a532.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_2a532.dir/feature_tests.c.o  -o cmTC_2a532 -rdynamic 
+Building C object CMakeFiles/cmTC_1f61a.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_1f61a.dir/feature_tests.c.o   -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1f61a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f61a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1f61a.dir/feature_tests.c.o  -o cmTC_1f61a -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -213,28 +213,28 @@ make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calc
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_511b2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_511b2.dir/build.make CMakeFiles/cmTC_511b2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e018a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e018a.dir/build.make CMakeFiles/cmTC_e018a.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_511b2.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_511b2.dir/testCXXCompiler.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_511b2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_511b2.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_511b2.dir/testCXXCompiler.cxx.o  -o cmTC_511b2 -rdynamic 
+Building CXX object CMakeFiles/cmTC_e018a.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_e018a.dir/testCXXCompiler.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_e018a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e018a.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_e018a.dir/testCXXCompiler.cxx.o  -o cmTC_e018a -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6c83a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6c83a.dir/build.make CMakeFiles/cmTC_6c83a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_38b4c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_38b4c.dir/build.make CMakeFiles/cmTC_38b4c.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_6c83a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c83a.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6c83a -rdynamic  
+Building CXX object CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_38b4c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38b4c.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_38b4c -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,8 +244,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c83a' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccy2vfTc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_6c83a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_38b4c' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJXqJya.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_38b4c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -253,14 +253,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6c83a/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6c83a.dir/build.make CMakeFiles/cmTC_6c83a.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_38b4c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_38b4c.dir/build.make CMakeFiles/cmTC_38b4c.dir/build]
   ignore line: [make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_6c83a]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c83a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6c83a -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_38b4c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38b4c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_38b4c -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6c83a' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccy2vfTc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_6c83a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_38b4c' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJXqJya.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_38b4c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccy2vfTc.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccJXqJya.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_6c83a] ==> ignore
+    arg [cmTC_38b4c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_6c83a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_38b4c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -338,14 +338,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6e578/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6e578.dir/build.make CMakeFiles/cmTC_6e578.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_553b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_553b9.dir/build.make CMakeFiles/cmTC_553b9.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6e578.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_6e578.dir/feature_tests.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6e578
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e578.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_6e578.dir/feature_tests.cxx.o  -o cmTC_6e578 -rdynamic 
+Building CXX object CMakeFiles/cmTC_553b9.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_553b9.dir/feature_tests.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_553b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_553b9.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_553b9.dir/feature_tests.cxx.o  -o cmTC_553b9 -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -411,14 +411,14 @@ make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calc
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eb6ed/fast"
-/usr/bin/make -f CMakeFiles/cmTC_eb6ed.dir/build.make CMakeFiles/cmTC_eb6ed.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e5b7f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e5b7f.dir/build.make CMakeFiles/cmTC_e5b7f.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_eb6ed.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_eb6ed.dir/feature_tests.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_eb6ed
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb6ed.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_eb6ed.dir/feature_tests.cxx.o  -o cmTC_eb6ed -rdynamic 
+Building CXX object CMakeFiles/cmTC_e5b7f.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_e5b7f.dir/feature_tests.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e5b7f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5b7f.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_e5b7f.dir/feature_tests.cxx.o  -o cmTC_e5b7f -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 
@@ -484,14 +484,14 @@ make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calc
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_44547/fast"
-/usr/bin/make -f CMakeFiles/cmTC_44547.dir/build.make CMakeFiles/cmTC_44547.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_512c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_512c4.dir/build.make CMakeFiles/cmTC_512c4.dir/build
 make[1]: Entering directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_44547.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_44547.dir/feature_tests.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_44547
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44547.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_44547.dir/feature_tests.cxx.o  -o cmTC_44547 -rdynamic 
+Building CXX object CMakeFiles/cmTC_512c4.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_512c4.dir/feature_tests.cxx.o -c /home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_512c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_512c4.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_512c4.dir/feature_tests.cxx.o  -o cmTC_512c4 -rdynamic 
 make[1]: Leaving directory '/home/stz/robot-dynamics-identify-v1.3/examples/calculate_dynamics/build/CMakeFiles/CMakeTmp'
 
 

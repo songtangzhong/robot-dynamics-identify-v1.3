@@ -4,6 +4,7 @@
 #include <math.h>
 #include <iostream>
 #include <Eigen/Dense>
+#include <cmath>
 
 using namespace Eigen;
 using namespace std;
@@ -97,7 +98,7 @@ void qr_decompose(robot_dyn::RobotModel *robot)
 
     for (unsigned int i=0; i< robot->Ps_num; i++)
     {
-        if (abs(R(i,i))< robot->qr_threshold) 
+        if (fabs(R(i,i))< robot->qr_threshold) 
         {
             robot->Ps_flag(i) = 0; 
         }
@@ -234,9 +235,9 @@ void inequality_constraint(unsigned m, double *result, unsigned n,
 
     for (unsigned int i=0; i< fourier->robot.dof; i++)
     {
-        q_ineq(i) = min(abs(fourier->robot.qMin(i)), abs(fourier->robot.qMax(i)));
-        qDot_ineq(i) = min(abs(fourier->robot.qDotMin(i)), abs(fourier->robot.qDotMax(i)));
-        qDDot_ineq(i) = min(abs(fourier->robot.qDDotMin(i)), abs(fourier->robot.qDDotMax(i)));
+        q_ineq(i) = min(fabs(fourier->robot.qMin(i)), fabs(fourier->robot.qMax(i)));
+        qDot_ineq(i) = min(fabs(fourier->robot.qDotMin(i)), fabs(fourier->robot.qDotMax(i)));
+        qDDot_ineq(i) = min(fabs(fourier->robot.qDDotMin(i)), fabs(fourier->robot.qDDotMax(i)));
     }
 
     VectorXd q = VectorXd::Zero(fourier->robot.dof);
@@ -258,7 +259,7 @@ void inequality_constraint(unsigned m, double *result, unsigned n,
             qDDot(i) = qDDot(i)+fourier->wf*sqrt(a*a+b*b)*j;
         }
 
-        q(i) = q(i)+abs(x[i*(2*fourier->N+1)+2*fourier->N]);
+        q(i) = q(i)+fabs(x[i*(2*fourier->N+1)+2*fourier->N]);
     }
         
     for (unsigned int i=0; i< fourier->robot.dof; i++)

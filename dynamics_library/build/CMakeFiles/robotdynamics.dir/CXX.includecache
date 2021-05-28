@@ -43,6 +43,8 @@ iostream
 -
 Eigen/Dense
 -
+cmath
+-
 
 /home/stz/robot-dynamics-identify-v1.3/dynamics_library/src/robot_dynamics/robot_dynamics.cpp
 robot_dynamics/robot_dynamics.h
