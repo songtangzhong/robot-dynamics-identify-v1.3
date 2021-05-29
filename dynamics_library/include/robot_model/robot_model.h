@@ -45,6 +45,9 @@ public:
     MatrixXd R2;
     double qr_threshold;
 
+    VectorXd Pb;
+    VectorXd Ps;
+
 private:
     // Modified DH parameters
     VectorXd alpha;    // x rotation

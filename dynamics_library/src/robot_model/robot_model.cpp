@@ -34,6 +34,7 @@ void RobotModel::InitModel(const unsigned int DOF)
     qDDotMax.resize(dof);
 
     qr_threshold = 1e-10;
+    Ps.resize(Ps_num);
 
     alpha.resize(dof);
     a.resize(dof);
